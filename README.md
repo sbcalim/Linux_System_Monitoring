@@ -6,4 +6,5 @@ Creates database named INPUT and collections CPU, RAM in localhost, port 27017 a
 COMPILATION AND RUNNING
 
 $ gcc -o pc_to_mongo pc_to_mongo.c $(pkg-config --cflags --libs libmongoc-1.0)
+
 $ ./pc_to_mongo
