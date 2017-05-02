@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+	<script>
+    function autoRefresh_div() {
+        $("#rcdiv").load("index.html");
+        $("#ccdiv").load("index.html");
+
+        var rc_url = 'rc.svg';
+		$('#rcdiv').attr('data', rc_url);
+		$('#rcdiv').load(rc_url);
+
+        var cc_url = 'cc.svg';
+		$('#ccdiv').attr('data', cc_url);
+		$('#ccdiv').load(cc_url);
+        //var rc = document.getElementById('rcdiv');
+        //rc.innerHTML('<object type="image/svg+xml" data="rc.svg" class="logo"></object>');
+        //$('#rcdiv').html('<object type="image/svg+xml" data="rc.svg" class="logo"></object>');
+    }
+    setInterval('autoRefresh_div()', 10000);
+    autoRefresh_div();
+	</script>
+
+    <style></style>
+  </head>
+  <body>
+	<section style="margin:0">
+	  	<div id="rcdiv" style="float:left; overflow:hidden; height:75%; width:50%">
+	  		<object id="rc" type="image/svg+xml" data="rc.svg" class="logo"></object>
+	  	</div>
+
+	  	<div id="ccdiv" style="float:left; overflow:hidden; height:75%; width:50%">
+	  		<object id="cc" type="image/svg+xml" data="cc.svg" class="logo"></object>
+	  	</div>
+	</section>
+  </body>
+</html>
