@@ -2,7 +2,6 @@ import pymongo
 import re
 import time
 import pygal
-from flask import Flask, json, render_template
 from pymongo import MongoClient
  
 client = MongoClient();
